@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+	<id>ReactiveUI.Additions</id>
+	<version>1.0.0-alpha01</version>
+	<authors>Gordon Watts</authors>
+	<owners>Gordon Watts</owners>
+	<licenseUrl>https://github.com/gordonwatts/CERNSSO/blob/master/license.txt</licenseUrl>
+	<projectUrl>https://github.com/gordonwatts/ReactiveUI.Additions</projectUrl>
+	<requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<description>A playground for some useful (for me) extensions to ReactiveUI</description>
+	<releaseNotes>First release</releaseNotes>
+	<copyright>Copyright 2013</copyright>
+	<tags>ReactiveUI PCL</tags>
+	<dependencies>
+		<dependency id="Rx-Core" version="2.2.2" />
+		<dependency id="Rx-Interfaces" version="2.2.2" />
+	</dependencies>
+  </metadata>
+  <files>
+	  <file src = "ReactiveUI.Additions\bin\Release\ReactiveUI.Additions.dll" target="lib\portable-net45+windowsphone8+WinRT45"/>
+	  <file src = "ReactiveUI.Additions\bin\Release\ReactiveUI.Additions.xml" target="lib\portable-net45+windowsphone8+WinRT45"/>
+
+	  <file src = "ReactiveUI.Additions\bin\Release\ReactiveUI.Additions.pdb" target="lib\portable-net45+windowsphone8+WinRT45"/>
+
+	  <file src="ReactiveUI.Additions\Properties\*.cs" target="src\Properties" />
+	  <file src="ReactiveUI.Additions\*.cs" target="src" />
+  </files>
+</package>
