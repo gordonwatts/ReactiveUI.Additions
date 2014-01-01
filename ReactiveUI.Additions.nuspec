@@ -2,7 +2,7 @@
 <package >
   <metadata>
 	<id>ReactiveUI.Additions</id>
-	<version>1.0.0-alpha01</version>
+	<version>$version$</version>
 	<authors>Gordon Watts</authors>
 	<owners>Gordon Watts</owners>
 	<licenseUrl>https://github.com/gordonwatts/CERNSSO/blob/master/license.txt</licenseUrl>
