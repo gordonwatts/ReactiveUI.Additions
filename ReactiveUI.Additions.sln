@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactiveUI.Additions.Tests"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C1F3BE3-3B17-438C-8234-47E16C2B1BE0}"
 	ProjectSection(SolutionItems) = preProject
+		BuildAndPushToMyGet.ps1 = BuildAndPushToMyGet.ps1
 		ReactiveUI.Additions.nuspec = ReactiveUI.Additions.nuspec
 	EndProjectSection
 EndProject

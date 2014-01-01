@@ -15,6 +15,10 @@
 	<dependencies>
 		<dependency id="Rx-Core" version="2.2.2" />
 		<dependency id="Rx-Interfaces" version="2.2.2" />
+		<dependency id="reactiveui-core" version="5.4.0" />
+		<dependency id="Rx-Linq" version="2.1.30214.0" />
+		<dependency id="Rx-Main" version="2.1.30214.0" />
+		<dependency id="Rx-PlatformServices" version="2.1.30214.0" />
 	</dependencies>
   </metadata>
   <files>

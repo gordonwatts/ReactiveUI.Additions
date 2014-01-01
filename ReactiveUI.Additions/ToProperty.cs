@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Reactive.Concurrency;
 namespace ReactiveUI
 {
     /// <summary>
@@ -49,7 +50,7 @@ namespace ReactiveUI
         }
 
         /// <summary>
-        /// The simplest of possible property conversions. Will send the result of
+        /// Will send the result of
         /// a stream of values to a value. The values will be set on the thread they
         /// arrive on.
         /// </summary>
@@ -63,9 +64,18 @@ namespace ReactiveUI
         /// no exception will be thrown.
         /// </remarks>
         public static BackingPropertyRO<T> ToProperty<T>(this IObservable<T> propertySource,
-            T initialValue = default(T))
+            T initialValue = default(T),
+            IScheduler scheduler = null)
         {
-            var bc = new BackingPropertyRO<T>(propertySource, initialValue);
+            IObservable<T> sourceStream = propertySource;
+            if (scheduler != null)
+            {
+                // Use this useful item from ReactiveUI's core library.
+                var subj = new ScheduledSubject<T>(scheduler);
+                sourceStream.Subscribe(subj);
+                sourceStream = subj;
+            }
+            var bc = new BackingPropertyRO<T>(sourceStream, initialValue);
             return bc;
         }
     }
